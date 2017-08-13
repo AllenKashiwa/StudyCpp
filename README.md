@@ -14,7 +14,7 @@
 
 ## 随书源码
 
-**/C++ Primer 5th Edition/VisualStudio2012/**文件夹下包含从[这里](http://www.informit.com/store/c-plus-plus-primer-9780321714114)下载的随书源码，仅供参考。
+[**/C++ Primer 5th Edition/VisualStudio2012/**](/C++ Primer 5th Edition/VisualStudio2012/)文件夹下包含从[这里](http://www.informit.com/store/c-plus-plus-primer-9780321714114)下载的随书源码，仅供参考。
 
 ## Exercise练习
 
@@ -29,4 +29,4 @@
 
 ## 实验楼
 
-**/DataStructure&Algorithm/Shiyanlou/**文件夹下包含[这个](https://www.shiyanlou.com/courses/20)课程列出的一些联系。
+[**/DataStructure&Algorithm/Shiyanlou/**](/DataStructure&Algorithm/Shiyanlou/)文件夹下包含[这个](https://www.shiyanlou.com/courses/20)课程列出的一些联系。
