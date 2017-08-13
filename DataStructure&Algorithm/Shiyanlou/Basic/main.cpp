@@ -1,13 +1,13 @@
-//×÷Òµ
+//ä½œä¸š
 //
-//ÊäÈëÒ»×éÕûÊý£¬Çó³öÕâ×éÊý×Ö×ÓÐòÁÐºÍÖÐµÄ×î´óÖµ£¬Ö»ÒªÇó³ö×î´ó×ÓÐòÁÐµÄºÍ£¬²»±ØÇó³ö×î´óÖµ¶ÔÓ¦µÄÐòÁÐ¡£
+//è¾“å…¥ä¸€ç»„æ•´æ•°ï¼Œæ±‚å‡ºè¿™ç»„æ•°å­—å­åºåˆ—å’Œä¸­çš„æœ€å¤§å€¼ï¼Œåªè¦æ±‚å‡ºæœ€å¤§å­åºåˆ—çš„å’Œï¼Œä¸å¿…æ±‚å‡ºæœ€å¤§å€¼å¯¹åº”çš„åºåˆ—ã€‚
 //
-//×î´ó×ÓÐòÁÐºÍ£ºÕûÊýÐòÁÐA1£¬ A2£¬... An £¨¿ÉÄÜÓÐ¸ºÊý£©£¬ÇóA1~AnµÄÒ»¸ö×ÓÐòÁÐAi~Aj£¬Ê¹µÃAiµ½AjµÄºÍ×î´ó¡£
-//ÀýÈç£º
+//æœ€å¤§å­åºåˆ—å’Œï¼šæ•´æ•°åºåˆ—A1ï¼Œ A2ï¼Œ... An ï¼ˆå¯èƒ½æœ‰è´Ÿæ•°ï¼‰ï¼Œæ±‚A1~Ançš„ä¸€ä¸ªå­åºåˆ—Ai~Ajï¼Œä½¿å¾—Aiåˆ°Ajçš„å’Œæœ€å¤§ã€‚
+//ä¾‹å¦‚ï¼š
 //
-//ÐòÁÐ£º - 2, 11, -4, 13, -5, 2, -5, -3, 12, -9£¬Ôò×î´ó×ÓÐòÁÐºÍÎª21¡£
+//åºåˆ—ï¼š - 2, 11, -4, 13, -5, 2, -5, -3, 12, -9ï¼Œåˆ™æœ€å¤§å­åºåˆ—å’Œä¸º21ã€‚
 //
-//ÐòÁÐ£º0, -3, 6, 8, -20, 21, 8, -9, 10, -1, 3, 6, 5£¬Ôò×î´ó×ÓÐòÁÐºÍÎª43¡£
+//åºåˆ—ï¼š0, -3, 6, 8, -20, 21, 8, -9, 10, -1, 3, 6, 5ï¼Œåˆ™æœ€å¤§å­åºåˆ—å’Œä¸º43ã€‚
 #include <iostream>
 
 using std::cout;
@@ -17,9 +17,9 @@ using std::endl;
 int main()
 {
     int arrLength;
-    cout << "ÊäÈëÊý×é¸öÊý:" << endl;
+    cout << "è¾“å…¥æ•°ç»„ä¸ªæ•°:" << endl;
     cin >> arrLength;
-    cout << "ÊäÈëÊý×é:" << endl;
+    cout << "è¾“å…¥æ•°ç»„:" << endl;
     int *arr = new int[arrLength];
     for (size_t i = 0; i < arrLength; i++)
     {
@@ -40,8 +40,8 @@ int main()
             }
         }
     }
-    cout << "×î´ó×ÓÐòÁÐºÍÊÇ£º " << max << endl;
-    cout << "¸ÃÐòÁÐÊÇ:" << endl;
+    cout << "æœ€å¤§å­åºåˆ—å’Œæ˜¯ï¼š " << max << endl;
+    cout << "è¯¥åºåˆ—æ˜¯:" << endl;
     for (size_t j = start; j <= end; j++)
     {
         cout << arr[j] << " ";
