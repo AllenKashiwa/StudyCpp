@@ -6,7 +6,7 @@ using namespace std;
 MyQueue::MyQueue(int queueCapacity) :m_iQueueCapacity(queueCapacity)
 {
     ClearQueue();
-    m_pQueue = new int[m_iQueueCapacity];
+    m_pQueue = new Customer[m_iQueueCapacity]();
 }
 
 MyQueue::~MyQueue()
@@ -37,7 +37,7 @@ int MyQueue::QueueLength() const
     return m_iQueueLen;
 }
 
-bool MyQueue::EnQueue(int element)
+bool MyQueue::EnQueue(Customer element)
 {
     if (QueueFull())
     {
@@ -50,7 +50,7 @@ bool MyQueue::EnQueue(int element)
     return true;
 }
 
-bool MyQueue::DeQueue(int& element)
+bool MyQueue::DeQueue(Customer& element)
 {
     if (QueueEmpty())
     {
@@ -69,6 +69,6 @@ void MyQueue::QueueTraverse()
     cout << "Traverse:" << endl;
     for (size_t i = m_iHead; i < m_iQueueLen + m_iHead; i++)
     {
-        cout << m_pQueue[i%m_iQueueCapacity] << endl;
+        m_pQueue[i%m_iQueueCapacity].printInfo();
     }
 }

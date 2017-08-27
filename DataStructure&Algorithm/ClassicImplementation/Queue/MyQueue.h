@@ -1,4 +1,7 @@
 #pragma once
+
+#include "Customer.h"
+
 class MyQueue
 {
 public:
@@ -8,11 +11,11 @@ public:
     bool QueueEmpty() const;
     bool QueueFull() const;
     int QueueLength() const;
-    bool EnQueue(int element);
-    bool DeQueue(int &element);
+    bool EnQueue(Customer element);
+    bool DeQueue(Customer &element);
     void QueueTraverse();
 private:
-    int *m_pQueue;
+    Customer *m_pQueue;
     int m_iQueueLen;
     int m_iQueueCapacity;
     int m_iHead;
