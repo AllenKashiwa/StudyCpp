@@ -29,4 +29,4 @@
 
 ## 实验楼
 
-[**/DataStructure&Algorithm/Shiyanlou/**](/DataStructure&Algorithm/Shiyanlou/)文件夹下包含[这个](https://www.shiyanlou.com/courses/20)课程列出的一些联系。
+[**/DataStructure&Algorithm/Shiyanlou/**](/DataStructure&Algorithm/Shiyanlou/)文件夹下包含[这个](https://www.shiyanlou.com/courses/20)课程列出的一些练习。
