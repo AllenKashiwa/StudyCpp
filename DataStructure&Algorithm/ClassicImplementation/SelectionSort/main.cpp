@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// 若使用对象数组，则其class需重载>运算符
+// 若使用对象数组，则其class需重载<,<=,>,>=运算符
 template<typename T>
 void selection_sort(std::vector<T>& arr) {
     for (int i = 0; i < arr.size() - 1; i++) {
@@ -16,6 +16,7 @@ void selection_sort(std::vector<T>& arr) {
     }
 }
 
+// 若使用对象数组，则其class需重载<<运算符
 template<typename T>
 void traverse_vector(const std::vector<T> &arr)
 {

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// 若使用对象数组，则其class需重载>运算符
+// 若使用对象数组，则其class需重载<,<=,>,>=运算符
 template<typename T>
 static void insertion_sort(T arr[], int len)
 {
@@ -20,7 +20,9 @@ static void insertion_sort(T arr[], int len)
     }
 }
 
-void traverse_arr(int arr[], int len)
+// 若使用对象数组，则其class需重载<<运算符
+template<typename T>
+void traverse_arr(T arr[], int len)
 {
     cout << "traverse arr:" << endl;
     for (int i = 0; i < len; i++)
@@ -32,9 +34,10 @@ void traverse_arr(int arr[], int len)
 
 int main()
 {
-    int arr[6] = { 34,8,64,51,32,21 };
-    traverse_arr(arr, 6);
-    insertion_sort<int>(arr, 6);
-    traverse_arr(arr, 6);
+    int arr[] = { 34,8,64,51,32,21 };
+    int len = (int)sizeof(arr) / sizeof(*arr);
+    traverse_arr(arr, len);
+    insertion_sort(arr, len);
+    traverse_arr(arr, len);
     return 0;
 }

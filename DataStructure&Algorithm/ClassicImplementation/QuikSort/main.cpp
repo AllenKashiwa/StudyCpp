@@ -8,7 +8,7 @@ struct Range {
     int start, end;
     Range(int s = 0, int e = 0) { start = s, end = e; }
 };
-// 若使用对象数组，则其class需重载>,< >=等运算符
+// 若使用对象数组，则其class需重载<,<=,>,>=运算符
 template<typename T>
 void quik_sort(T arr[], const int len)
 {
@@ -39,7 +39,7 @@ void quik_sort(T arr[], const int len)
 }
 
 // ************ 迭代版 *******************
-// 若使用对象数组，则其class需重载>,< >=等运算符
+// 若使用对象数组，则其class需重载<,<=,>,>=运算符
 template<typename T>
 static void quik_sort_recursive(T arr[], int start, int end)
 {
@@ -60,7 +60,9 @@ static void quik_sort_recursive(T arr[], int start, int end)
     quik_sort_recursive(arr, left + 1, end);
 }
 
-void traverse_arr(int arr[], int len)
+// 若使用对象数组，则其class需重载<<运算符
+template<typename T>
+void traverse_arr(T arr[], int len)
 {
     cout << "traverse arr:" << endl;
     for (int i = 0; i < len; i++)
@@ -73,15 +75,17 @@ void traverse_arr(int arr[], int len)
 int main()
 {
     // 迭代版
-    int arr[13] = { 81,94,11,96,12,35,17,95,28,58,41,75,15 };
-    traverse_arr(arr, 13);
-    quik_sort(arr, 13);
-    traverse_arr(arr, 13);
+    int arr[] = { 81,94,11,96,12,35,17,95,28,58,41,75,15 };
+    int len = (int)sizeof(arr) / sizeof(*arr);
+    traverse_arr(arr, len);
+    quik_sort(arr, len);
+    traverse_arr(arr, len);
 
     // 递归版
-    int arr2[13] = { 81,94,11,96,12,35,17,95,28,58,41,75,15 };
-    traverse_arr(arr2, 13);
-    quik_sort_recursive<int>(arr2, 0, 12);
-    traverse_arr(arr2, 13);
+    int arr2[] = { 81,94,11,96,12,35,17,95,28,58,41,75,15 };
+    len = (int)sizeof(arr2) / sizeof(*arr2);
+    traverse_arr(arr2, len);
+    quik_sort_recursive<int>(arr2, 0, len - 1);
+    traverse_arr(arr2, len);
     return 0;
 }
