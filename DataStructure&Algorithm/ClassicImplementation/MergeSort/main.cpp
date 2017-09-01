@@ -6,7 +6,7 @@ using namespace std;
 // ************ 迭代版 *******************
 // 若使用对象数组，则其class需重载>运算符
 template<typename T>
-void merge_sort(T *arr, int len)
+void merge_sort(T arr[], int len)
 {
     T *a = arr;
     T *b = new T[len];
@@ -44,7 +44,7 @@ void merge_sort(T *arr, int len)
 // ************ 迭代版 *******************
 // 若使用对象数组，则其class需重载>运算符
 template<typename T>
-static void merge_sort_recursive(T *arr, T *reg, int start, int end)
+static void merge_sort_recursive(T arr[], T reg[], int start, int end)
 {
     if (start >= end)
         return;
@@ -65,7 +65,7 @@ static void merge_sort_recursive(T *arr, T *reg, int start, int end)
         arr[k] = reg[k];
 }
 
-void traverse_arr(int* arr, int len)
+void traverse_arr(int arr[], int len)
 {
     cout << "traverse arr:" << endl;
     for (int i = 0; i < len; i++)

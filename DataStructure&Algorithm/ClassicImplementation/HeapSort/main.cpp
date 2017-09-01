@@ -4,7 +4,7 @@
 using namespace std;
 
 template<typename T>
-void max_heapify(T *arr, int start, int end)
+void max_heapify(T arr[], int start, int end)
 {
     // 建立父节点与子节点索引
     int dad = start;
@@ -33,7 +33,7 @@ void max_heapify(T *arr, int start, int end)
 
 // 若使用对象数组，则其class需重载>运算符
 template<typename T>
-static void heap_sort(T *arr, int len)
+static void heap_sort(T arr[], int len)
 {
     // 初始化, i从最后一个父节点开始调整
     for (int i = len / 2; i >= 0; i--)
@@ -49,7 +49,7 @@ static void heap_sort(T *arr, int len)
     }
 }
 
-void traverse_arr(int* arr, int len)
+void traverse_arr(int arr[], int len)
 {
     cout << "traverse arr:" << endl;
     for (int i = 0; i < len; i++)

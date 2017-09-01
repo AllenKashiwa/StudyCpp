@@ -4,7 +4,7 @@ using namespace std;
 
 // 若使用对象数组，则其class需重载>运算符
 template<typename T>
-static void insertion_sort(T *arr, int len)
+static void insertion_sort(T arr[], int len)
 {
     int i, j;
     T temp;
@@ -20,7 +20,7 @@ static void insertion_sort(T *arr, int len)
     }
 }
 
-void traverse_arr(int* arr, int len)
+void traverse_arr(int arr[], int len)
 {
     cout << "traverse arr:" << endl;
     for (int i = 0; i < len; i++)
