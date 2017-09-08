@@ -59,20 +59,24 @@ int main()
 {
     // 工厂方法模式
     ButtonFactory1* factory1 = new WinButtonFactory();
-    Button* btn = factory1->createButton();
-    btn->display();
+    Button* btn1 = factory1->createButton();
+    btn1->display();
     factory1 = new MacButtonFactory();
-    btn = factory1->createButton();
-    btn->display();
+    btn1 = factory1->createButton();
+    btn1->display();
+
+    delete btn1;
     delete factory1;
 
     // 简单工厂模式
     ButtonFactory2* factory2 = new ButtonFactory2();
-    btn = factory2->createButton(WINDOWS);
-    btn->display();
-    btn = factory2->createButton(MAC);
-    btn->display();
+    Button* btn2 = factory2->createButton(WINDOWS);
+    btn2->display();
+    btn2 = factory2->createButton(MAC);
+    btn2->display();
 
-    delete btn;
+    delete btn2;
+    delete factory2;
+
     return 0;
 }
