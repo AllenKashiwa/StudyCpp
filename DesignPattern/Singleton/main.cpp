@@ -1,5 +1,5 @@
-#include <iostream>
 // 单例模式（Singleton Pattern）确保一个类只有一个实例，并提供对该实例的全局访问。
+#include <iostream>
 
 // 1. 试用于单线程的懒汉写法
 class Singleton1
@@ -15,7 +15,7 @@ public:
     }
 private:
     Singleton1() {}
-    ~Singleton1(){}
+    ~Singleton1() {}
     static Singleton1* m_pInstance;
 };
 
@@ -50,7 +50,7 @@ Singleton2* Singleton2::m_pInstance = 0;
 class Singleton3 {
 private:
     Singleton3() {}
-    ~Singleton3(){}
+    ~Singleton3() {}
     // C++ 03
     // ========
     // 声明拷贝构造函数和赋值函数，但不予实现避免多个实例
